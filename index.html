@@ -1,4 +1,774 @@
-.status-active {
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Skill - Инвестиционная возможность ₽2.7М в месяц</title>
+    <meta name="description" content="Инвестируйте в Easy Skill - ₽2.7М выручки в месяц, 75% маржинальность, 0% отток клиентов. Уникальная концепция 'Вокал как SPA для души'">
+    
+    <!-- SEO и Social Media -->
+    <meta property="og:title" content="Easy Skill - Инвестиционная возможность ₽2.7М в месяц">
+    <meta property="og:description" content="Уникальная концепция 'Вокал как SPA для души' с доказанной экономикой ₽2.7М в месяц">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1F2937;
+            overflow-x: hidden;
+        }
+
+        /* Плавная прокрутка */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Навигация */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 32, 44, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar.scrolled {
+            background: rgba(26, 32, 44, 0.98);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #FBBF24;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: #FBBF24;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #FBBF24;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #FBBF24, #F59E0B);
+            color: #1a202c;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            font-size: 0.9rem;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(251, 191, 36, 0.4);
+        }
+
+        /* Мобильное меню */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: rgba(26, 32, 44, 0.98);
+            backdrop-filter: blur(20px);
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: color 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .mobile-menu a:hover {
+            color: #FBBF24;
+        }
+
+        /* Герой секция */
+        .hero {
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #3182CE 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(251, 191, 36, 0.3);
+            border-radius: 50%;
+            animation: float-particle 20s infinite linear;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-highlight {
+            background: linear-gradient(45deg, #FBBF24, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+                filter: brightness(1);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(251, 191, 36, 0.8);
+                filter: brightness(1.2);
+            }
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #E2E8F0;
+            margin-bottom: 30px;
+            max-width: 500px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .hero-benefits {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .hero-benefit {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out both;
+        }
+
+        .hero-benefit:nth-child(1) { animation-delay: 0.5s; }
+        .hero-benefit:nth-child(2) { animation-delay: 0.6s; }
+        .hero-benefit:nth-child(3) { animation-delay: 0.7s; }
+        .hero-benefit:nth-child(4) { animation-delay: 0.8s; }
+
+        .hero-benefit:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            background: rgba(251, 191, 36, 0.2);
+        }
+
+        .benefit-icon {
+            font-size: 1.8rem;
+            margin-right: 12px;
+            animation: bounce 2s infinite;
+        }
+
+        .benefit-text {
+            color: #E2E8F0;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .benefit-text strong {
+            color: #FBBF24;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: slideInRight 1s ease-out;
+        }
+
+        .floating-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: float 6s ease-in-out infinite;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .floating-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .floating-card h3 {
+            font-size: 1.3rem;
+            color: #FBBF24;
+            margin-bottom: 15px;
+        }
+
+        .floating-card .big-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #10B981;
+            display: block;
+            margin: 10px 0;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Анимации появления */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes countUp {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* Статистика секция */
+        .stats-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #1F2937;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #FBBF24, #F59E0B);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #6B7280;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #FBBF24, #10B981);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border-color: #FBBF24;
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #3182CE;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #6B7280;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* Модель бизнеса */
+        .business-model {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #3182CE 0%, #1E40AF 100%);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .business-model::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: movePattern 20s linear infinite;
+        }
+
+        @keyframes movePattern {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .model-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .model-content h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .model-features {
+            list-style: none;
+        }
+
+        .model-features li {
+            padding: 12px 0;
+            font-size: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            padding-left: 35px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideInFeature 0.6s ease-out forwards;
+        }
+
+        .model-features li:nth-child(1) { animation-delay: 0.1s; }
+        .model-features li:nth-child(2) { animation-delay: 0.2s; }
+        .model-features li:nth-child(3) { animation-delay: 0.3s; }
+        .model-features li:nth-child(4) { animation-delay: 0.4s; }
+        .model-features li:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes slideInFeature {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .model-features li:hover {
+            padding-left: 45px;
+            color: #FBBF24;
+        }
+
+        .model-features li:before {
+            content: "💎";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .model-features li:hover:before {
+            transform: rotate(360deg) scale(1.2);
+        }
+
+        .calculation-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calculation-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.05), transparent);
+            animation: calculationShine 3s infinite;
+        }
+
+        @keyframes calculationShine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .calculation-step {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0;
+            font-size: 1.1rem;
+            padding: 8px 0;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .calculation-step:hover {
+            background: rgba(255, 255, 255, 0.1);
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .calculation-step.result {
+            border-top: 2px solid #FBBF24;
+            padding-top: 20px;
+            font-weight: 900;
+            color: #FBBF24;
+            font-size: 1.3rem;
+            animation: highlightResult 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes highlightResult {
+            from {
+                box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+            }
+            to {
+                box-shadow: 0 0 40px rgba(251, 191, 36, 0.6);
+            }
+        }
+
+        /* Потенциал секция */
+        .potential-section {
+            padding: 80px 0;
+            background: #fff;
+            position: relative;
+        }
+
+        .potential-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 60px;
+        }
+
+        .potential-card {
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .potential-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(45deg, #FBBF24, #10B981);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .potential-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .potential-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .potential-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1F2937;
+            margin: 15px 0;
+        }
+
+        .potential-status {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            animation: pulse 2s infinite;
+        }
+
+        .status-active {
             background: #D1FAE5;
             color: #065F46;
             box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
@@ -123,12 +893,6 @@
         .form-submit:hover {
             transform: translateY(-2px);
             box-shadow: 0 15px 35px rgba(251, 191, 36, 0.4);
-        }
-
-        .form-submit:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-            transform: none;
         }
 
         /* Модальное окно успеха */
@@ -994,6 +1758,10 @@
                 <div class="calculation-box slide-in-right">
                     <h3 style="color: #FBBF24; margin-bottom: 25px; font-size: 1.3rem;">Расчет прибыли:</h3>
                     <div class="calculation-step">
+                        <span>1 продажа:</span>
+                        <span>₽45,000</span>
+                    </div>
+                    <div class="calculation-step">
                         <span>2 продажи в день:</span>
                         <span>₽90,000</span>
                     </div>
@@ -1136,7 +1904,7 @@
                         <div class="contact-icon">📧</div>
                         <div>
                             <strong>Email:</strong><br>
-                            <a href="mailto:invest@easyskill.ru" style="color: #3182CE; text-decoration: none;">invest@easyskill.ru</a>
+                            <a href="mailto:easy-skill.music@mail.ru" style="color: #3182CE; text-decoration: none;">invest@easyskill.ru</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1211,7 +1979,7 @@
         <div class="modal-content">
             <span class="modal-close" id="closeModal">&times;</span>
             <h2>🎉 Заявка отправлена!</h2>
-            <p>Спасибо за интерес к проекту Easy Skill! Ваша заявка отправлена в Telegram. Мы свяжемся с вами в течение 24 часов и предоставим подробный бизнес-план.</p>
+            <p>Спасибо за интерес к проекту Easy Skill! Мы свяжемся с вами в течение 24 часов и предоставим подробный бизнес-план.</p>
             <p style="margin-top: 20px;"><strong>Анастасия Павлова</strong><br>+7 950 008 2854</p>
         </div>
     </div>
@@ -1220,48 +1988,6 @@
     <div class="scroll-top" id="scrollTop">↑</div>
 
     <script>
-        // Конфигурация Telegram бота
-        const TELEGRAM_BOT_TOKEN = '8254504096:AAHGMevTQFrtVv3IOCiny8VLsGtQWn1f3YU';
-        const TELEGRAM_CHAT_ID = '236801033';
-
-        // Функция отправки в Telegram
-        async function sendToTelegram(formData) {
-            const message = `🚀 НОВАЯ ЗАЯВКА Easy Skill Investment
-
-👤 Имя: ${formData.name}
-📧 Email: ${formData.email}
-📞 Телефон: ${formData.phone}
-💰 Сумма инвестиций: ${formData.investment || 'Не указана'}
-📊 Опыт: ${formData.experience || 'Не указан'}
-💬 Комментарий: ${formData.message || 'Не указан'}
-
-🕐 Время: ${new Date().toLocaleString('ru-RU')}
-🌐 Источник: zakazsta.github.io/easy-skill-landing`;
-
-            try {
-                const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        chat_id: TELEGRAM_CHAT_ID,
-                        text: message,
-                        parse_mode: 'HTML'
-                    })
-                });
-
-                if (response.ok) {
-                    return { success: true };
-                } else {
-                    throw new Error('Ошибка отправки в Telegram');
-                }
-            } catch (error) {
-                console.error('Ошибка:', error);
-                return { success: false, error: error.message };
-            }
-        }
-
         // Прелоадер
         window.addEventListener('load', function() {
             setTimeout(() => {
@@ -1359,12 +2085,13 @@
         // Создание частиц в героической секции
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
-            const particleCount = window.innerWidth < 768 ? 30 : 50;
+            const particleCount = window.innerWidth < 768 ? 30 : 50; // Меньше частиц на мобильных
 
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 
+                // Случайные размеры и позиции
                 const size = Math.random() * 4 + 2;
                 particle.style.width = size + 'px';
                 particle.style.height = size + 'px';
@@ -1376,7 +2103,7 @@
             }
         }
 
-        // Форма инвестора с Telegram интеграцией
+        // Форма инвестора
         const investorForm = document.getElementById('investorForm');
         const successModal = document.getElementById('successModal');
         const closeModal = document.getElementById('closeModal');
@@ -1387,40 +2114,45 @@
             const submitBtn = investorForm.querySelector('.form-submit');
             const originalText = submitBtn.textContent;
             
-            // Показываем процесс отправки
-            submitBtn.textContent = 'Отправляем в Telegram...';
+            submitBtn.textContent = 'Отправляем...';
             submitBtn.disabled = true;
             
-            // Собираем данные формы
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                investment: document.getElementById('investment').value,
-                experience: document.getElementById('experience').value,
-                message: document.getElementById('message').value
-            };
-            
-            // Отправляем в Telegram
-            const result = await sendToTelegram(formData);
-            
-            if (result.success) {
-                // Успешная отправка
-                submitBtn.textContent = '✅ Отправлено!';
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
+            try {
+                // Собираем данные формы
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    investment_amount: document.getElementById('investment').value,
+                    experience: document.getElementById('experience').value,
+                    message: document.getElementById('message').value,
+                    timestamp: new Date().toLocaleString('ru-RU')
+                };
+                
+                // Отправляем данные на сервер
+                const response = await fetch('/api/send-form', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
                     successModal.style.display = 'block';
                     investorForm.reset();
-                }, 1000);
-            } else {
-                // Ошибка отправки
-                submitBtn.textContent = '❌ Ошибка';
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    alert('Произошла ошибка при отправке. Пожалуйста, свяжитесь с нами по телефону +7 950 008 2854');
-                }, 1000);
+                } else {
+                    alert('Ошибка при отправке: ' + (result.error || 'Неизвестная ошибка'));
+                }
+                
+            } catch (error) {
+                console.error('Ошибка:', error);
+                alert('Ошибка при отправке формы. Попробуйте еще раз.');
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
             }
         });
 
@@ -1675,791 +2407,14 @@
             setInterval(showActivityNotification, Math.random() * 15000 + 15000);
         }
 
-        // Счетчик времени на странице
+        // Счетчик времени на странице (для аналитики)
         let timeOnPage = 0;
         setInterval(() => {
             timeOnPage++;
-            if (timeOnPage % 30 === 0) {
+            if (timeOnPage % 30 === 0) { // каждые 30 секунд
                 console.log(`Время на странице: ${timeOnPage} секунд`);
             }
         }, 1000);
     </script>
 </body>
-</html><span>1 продажа:</span>
-                        <span>₽45,000</span>
-                    </div>
-                    <div class="calculation-step">
-                        <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy Skill - Инвестиционная возможность ₽2.7М в месяц</title>
-    <meta name="description" content="Инвестируйте в Easy Skill - ₽2.7М выручки в месяц, 75% маржинальность, 0% отток клиентов. Уникальная концепция 'Вокал как SPA для души'">
-    
-    <!-- SEO и Social Media -->
-    <meta property="og:title" content="Easy Skill - Инвестиционная возможность ₽2.7М в месяц">
-    <meta property="og:description" content="Уникальная концепция 'Вокал как SPA для души' с доказанной экономикой ₽2.7М в месяц">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #1F2937;
-            overflow-x: hidden;
-        }
-
-        /* Плавная прокрутка */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Навигация */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(26, 32, 44, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 15px 0;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .navbar.scrolled {
-            background: rgba(26, 32, 44, 0.98);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #FBBF24;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
-            text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-            padding: 5px 0;
-            font-size: 0.9rem;
-        }
-
-        .nav-links a:hover {
-            color: #FBBF24;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #FBBF24;
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .cta-button {
-            background: linear-gradient(45deg, #FBBF24, #F59E0B);
-            color: #1a202c;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            font-size: 0.9rem;
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(251, 191, 36, 0.4);
-        }
-
-        /* Мобильное меню */
-        .mobile-menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 5px;
-        }
-
-        .mobile-menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background: #fff;
-            margin: 3px 0;
-            transition: 0.3s;
-        }
-
-        .mobile-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background: rgba(26, 32, 44, 0.98);
-            backdrop-filter: blur(20px);
-            flex-direction: column;
-            padding: 20px;
-        }
-
-        .mobile-menu.active {
-            display: flex;
-        }
-
-        .mobile-menu a {
-            color: #fff;
-            text-decoration: none;
-            padding: 15px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            transition: color 0.3s ease;
-            font-size: 1.1rem;
-        }
-
-        .mobile-menu a:hover {
-            color: #FBBF24;
-        }
-
-        /* Герой секция */
-        .hero {
-            background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #3182CE 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            padding-top: 80px;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero-particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .particle {
-            position: absolute;
-            background: rgba(251, 191, 36, 0.3);
-            border-radius: 50%;
-            animation: float-particle 20s infinite linear;
-        }
-
-        @keyframes float-particle {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-content {
-            animation: slideInLeft 1s ease-out;
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            font-weight: 900;
-            color: #fff;
-            margin-bottom: 20px;
-            line-height: 1.1;
-        }
-
-        .hero-highlight {
-            background: linear-gradient(45deg, #FBBF24, #F59E0B);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: block;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
-                filter: brightness(1);
-            }
-            to {
-                text-shadow: 0 0 30px rgba(251, 191, 36, 0.8);
-                filter: brightness(1.2);
-            }
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            color: #E2E8F0;
-            margin-bottom: 30px;
-            max-width: 500px;
-            animation: fadeInUp 1s ease-out 0.3s both;
-        }
-
-        .hero-benefits {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin: 30px 0;
-        }
-
-        .hero-benefit {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-            animation: fadeInUp 1s ease-out both;
-        }
-
-        .hero-benefit:nth-child(1) { animation-delay: 0.5s; }
-        .hero-benefit:nth-child(2) { animation-delay: 0.6s; }
-        .hero-benefit:nth-child(3) { animation-delay: 0.7s; }
-        .hero-benefit:nth-child(4) { animation-delay: 0.8s; }
-
-        .hero-benefit:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            background: rgba(251, 191, 36, 0.2);
-        }
-
-        .benefit-icon {
-            font-size: 1.8rem;
-            margin-right: 12px;
-            animation: bounce 2s infinite;
-        }
-
-        .benefit-text {
-            color: #E2E8F0;
-            font-size: 0.85rem;
-            line-height: 1.4;
-        }
-
-        .benefit-text strong {
-            color: #FBBF24;
-            font-size: 0.9rem;
-            display: block;
-            margin-bottom: 2px;
-        }
-
-        .hero-visual {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            animation: slideInRight 1s ease-out;
-        }
-
-        .floating-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            animation: float 6s ease-in-out infinite;
-            text-align: center;
-            color: #fff;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .floating-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .floating-card h3 {
-            font-size: 1.3rem;
-            color: #FBBF24;
-            margin-bottom: 15px;
-        }
-
-        .floating-card .big-number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #10B981;
-            display: block;
-            margin: 10px 0;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(2deg); }
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        /* Анимации появления */
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes countUp {
-            from { opacity: 0; transform: scale(0.5); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-
-        /* Статистика секция */
-        .stats-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
-            position: relative;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            color: #1F2937;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(45deg, #FBBF24, #F59E0B);
-            border-radius: 2px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.1rem;
-            color: #6B7280;
-            margin-bottom: 60px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            margin-bottom: 60px;
-        }
-
-        .stat-card {
-            background: #fff;
-            padding: 30px 20px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(45deg, #FBBF24, #10B981);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .stat-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-            border-color: #FBBF24;
-        }
-
-        .stat-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            animation: bounce 2s infinite;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: #3182CE;
-            margin-bottom: 10px;
-            position: relative;
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            color: #6B7280;
-            font-weight: 600;
-            line-height: 1.3;
-        }
-
-        /* Модель бизнеса */
-        .business-model {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #3182CE 0%, #1E40AF 100%);
-            color: #fff;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .business-model::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: movePattern 20s linear infinite;
-        }
-
-        @keyframes movePattern {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-
-        .model-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .model-content h2 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 30px;
-            color: #fff;
-        }
-
-        .model-features {
-            list-style: none;
-        }
-
-        .model-features li {
-            padding: 12px 0;
-            font-size: 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            position: relative;
-            padding-left: 35px;
-            transition: all 0.3s ease;
-            opacity: 0;
-            transform: translateX(-20px);
-            animation: slideInFeature 0.6s ease-out forwards;
-        }
-
-        .model-features li:nth-child(1) { animation-delay: 0.1s; }
-        .model-features li:nth-child(2) { animation-delay: 0.2s; }
-        .model-features li:nth-child(3) { animation-delay: 0.3s; }
-        .model-features li:nth-child(4) { animation-delay: 0.4s; }
-        .model-features li:nth-child(5) { animation-delay: 0.5s; }
-
-        @keyframes slideInFeature {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .model-features li:hover {
-            padding-left: 45px;
-            color: #FBBF24;
-        }
-
-        .model-features li:before {
-            content: "💎";
-            position: absolute;
-            left: 0;
-            top: 12px;
-            transition: transform 0.3s ease;
-        }
-
-        .model-features li:hover:before {
-            transform: rotate(360deg) scale(1.2);
-        }
-
-        .calculation-box {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .calculation-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.05), transparent);
-            animation: calculationShine 3s infinite;
-        }
-
-        @keyframes calculationShine {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-
-        .calculation-step {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 15px 0;
-            font-size: 1.1rem;
-            padding: 8px 0;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 2;
-        }
-
-        .calculation-step:hover {
-            background: rgba(255, 255, 255, 0.1);
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-        .calculation-step.result {
-            border-top: 2px solid #FBBF24;
-            padding-top: 20px;
-            font-weight: 900;
-            color: #FBBF24;
-            font-size: 1.3rem;
-            animation: highlightResult 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes highlightResult {
-            from {
-                box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
-            }
-            to {
-                box-shadow: 0 0 40px rgba(251, 191, 36, 0.6);
-            }
-        }
-
-        /* Потенциал секция */
-        .potential-section {
-            padding: 80px 0;
-            background: #fff;
-            position: relative;
-        }
-
-        .potential-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 60px;
-        }
-
-        .potential-card {
-            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
-            padding: 30px;
-            border-radius: 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-        }
-
-        .potential-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(45deg, #FBBF24, #10B981);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .potential-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .potential-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .potential-card h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #1F2937;
-            margin: 15px 0;
-        }
-
-        .potential-status {
-            display: inline-block;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            animation: pulse 2s infinite;
-        }
-
-        .status-active {
-            background: #D1FAE5;
-            color: #065F46;
-            box-shadow: 0
+</html>
