@@ -1,0 +1,2392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Skill - Инвестиционная возможность ₽2.7М в месяц</title>
+    <meta name="description" content="Инвестируйте в Easy Skill - ₽2.7М выручки в месяц, 75% маржинальность, 0% отток клиентов. Уникальная концепция 'Вокал как SPA для души'">
+    
+    <!-- SEO и Social Media -->
+    <meta property="og:title" content="Easy Skill - Инвестиционная возможность ₽2.7М в месяц">
+    <meta property="og:description" content="Уникальная концепция 'Вокал как SPA для души' с доказанной экономикой ₽2.7М в месяц">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1F2937;
+            overflow-x: hidden;
+        }
+
+        /* Плавная прокрутка */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Навигация */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 32, 44, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar.scrolled {
+            background: rgba(26, 32, 44, 0.98);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #FBBF24;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: #FBBF24;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #FBBF24;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #FBBF24, #F59E0B);
+            color: #1a202c;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            font-size: 0.9rem;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(251, 191, 36, 0.4);
+        }
+
+        /* Мобильное меню */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: rgba(26, 32, 44, 0.98);
+            backdrop-filter: blur(20px);
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: color 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .mobile-menu a:hover {
+            color: #FBBF24;
+        }
+
+        /* Герой секция */
+        .hero {
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #3182CE 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(251, 191, 36, 0.3);
+            border-radius: 50%;
+            animation: float-particle 20s infinite linear;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-highlight {
+            background: linear-gradient(45deg, #FBBF24, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+                filter: brightness(1);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(251, 191, 36, 0.8);
+                filter: brightness(1.2);
+            }
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #E2E8F0;
+            margin-bottom: 30px;
+            max-width: 500px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .hero-benefits {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .hero-benefit {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out both;
+        }
+
+        .hero-benefit:nth-child(1) { animation-delay: 0.5s; }
+        .hero-benefit:nth-child(2) { animation-delay: 0.6s; }
+        .hero-benefit:nth-child(3) { animation-delay: 0.7s; }
+        .hero-benefit:nth-child(4) { animation-delay: 0.8s; }
+
+        .hero-benefit:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            background: rgba(251, 191, 36, 0.2);
+        }
+
+        .benefit-icon {
+            font-size: 1.8rem;
+            margin-right: 12px;
+            animation: bounce 2s infinite;
+        }
+
+        .benefit-text {
+            color: #E2E8F0;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .benefit-text strong {
+            color: #FBBF24;
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: slideInRight 1s ease-out;
+        }
+
+        .floating-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: float 6s ease-in-out infinite;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .floating-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .floating-card h3 {
+            font-size: 1.3rem;
+            color: #FBBF24;
+            margin-bottom: 15px;
+        }
+
+        .floating-card .big-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #10B981;
+            display: block;
+            margin: 10px 0;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* Анимации появления */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes countUp {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* Статистика секция */
+        .stats-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #1F2937;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, #FBBF24, #F59E0B);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #6B7280;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #FBBF24, #10B981);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border-color: #FBBF24;
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #3182CE;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #6B7280;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* Модель бизнеса */
+        .business-model {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #3182CE 0%, #1E40AF 100%);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .business-model::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: movePattern 20s linear infinite;
+        }
+
+        @keyframes movePattern {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .model-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .model-content h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .model-features {
+            list-style: none;
+        }
+
+        .model-features li {
+            padding: 12px 0;
+            font-size: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            padding-left: 35px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateX(-20px);
+            animation: slideInFeature 0.6s ease-out forwards;
+        }
+
+        .model-features li:nth-child(1) { animation-delay: 0.1s; }
+        .model-features li:nth-child(2) { animation-delay: 0.2s; }
+        .model-features li:nth-child(3) { animation-delay: 0.3s; }
+        .model-features li:nth-child(4) { animation-delay: 0.4s; }
+        .model-features li:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes slideInFeature {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .model-features li:hover {
+            padding-left: 45px;
+            color: #FBBF24;
+        }
+
+        .model-features li:before {
+            content: "💎";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .model-features li:hover:before {
+            transform: rotate(360deg) scale(1.2);
+        }
+
+        .calculation-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calculation-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.05), transparent);
+            animation: calculationShine 3s infinite;
+        }
+
+        @keyframes calculationShine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .calculation-step {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0;
+            font-size: 1.1rem;
+            padding: 8px 0;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .calculation-step:hover {
+            background: rgba(255, 255, 255, 0.1);
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .calculation-step.result {
+            border-top: 2px solid #FBBF24;
+            padding-top: 20px;
+            font-weight: 900;
+            color: #FBBF24;
+            font-size: 1.3rem;
+            animation: highlightResult 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes highlightResult {
+            from {
+                box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+            }
+            to {
+                box-shadow: 0 0 40px rgba(251, 191, 36, 0.6);
+            }
+        }
+
+        /* Потенциал секция */
+        .potential-section {
+            padding: 80px 0;
+            background: #fff;
+            position: relative;
+        }
+
+        .potential-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 60px;
+        }
+
+        .potential-card {
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .potential-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(45deg, #FBBF24, #10B981);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .potential-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .potential-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .potential-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1F2937;
+            margin: 15px 0;
+        }
+
+        .potential-status {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            animation: pulse 2s infinite;
+        }
+
+        .status-active {
+            background: #D1FAE5;
+            color: #065F46;
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .status-ready {
+            background: #FEF3C7;
+            color: #92400E;
+            box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+        }
+
+        /* Форма инвестора */
+        .investor-form {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .investor-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(49, 130, 206, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 40% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #E2E8F0;
+            transition: color 0.3s ease;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #FBBF24;
+            box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #FBBF24, #F59E0B);
+            color: #1a202c;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-submit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .form-submit:hover::before {
+            left: 100%;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(251, 191, 36, 0.4);
+        }
+
+        /* Модальное окно успеха */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #10B981, #059669);
+            margin: 15% auto;
+            padding: 30px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            animation: modalSlideIn 0.5s ease-out;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: #fff;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-close:hover {
+            opacity: 0.7;
+        }
+
+        .modal h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .modal p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Контакты */
+        .contact-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .contact-info {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-info:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            font-size: 1rem;
+            padding: 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: #F8FAFC;
+            transform: translateX(10px);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #3182CE;
+            width: 40px;
+            text-align: center;
+        }
+
+        .founder-card {
+            text-align: center;
+            background: linear-gradient(135deg, #3182CE, #1E40AF);
+            color: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .founder-card:hover {
+            transform: scale(1.02);
+        }
+
+        .founder-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: rotatePattern 20s linear infinite;
+        }
+
+        @keyframes rotatePattern {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .founder-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #FBBF24, #F59E0B);
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            position: relative;
+            z-index: 2;
+            animation: avatarFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes avatarFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .founder-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .founder-title {
+            color: #FBBF24;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Кнопка наверх */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(45deg, #FBBF24, #F59E0B);
+            color: #1a202c;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 15px 35px rgba(251, 191, 36, 0.4);
+        }
+
+        /* Анимации появления при скролле */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Футер */
+        .footer {
+            background: #1a202c;
+            color: #E2E8F0;
+            padding: 50px 0 30px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #FBBF24;
+            margin-bottom: 15px;
+        }
+
+        .footer-text {
+            font-size: 1rem;
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-stat {
+            text-align: center;
+        }
+
+        .footer-stat-number {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #FBBF24;
+            display: block;
+        }
+
+        .footer-stat-label {
+            font-size: 0.8rem;
+            color: #9CA3AF;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 25px;
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 1024px) {
+            .hero-container {
+                gap: 30px;
+            }
+            
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
+            .cta-button {
+                padding: 8px 16px;
+                font-size: 0.8rem;
+            }
+            
+            .hero {
+                padding-top: 100px;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-benefits {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .benefit-icon {
+                font-size: 1.5rem;
+                margin-right: 10px;
+            }
+
+            .benefit-text {
+                font-size: 0.8rem;
+            }
+
+            .benefit-text strong {
+                font-size: 0.85rem;
+            }
+
+            .floating-card {
+                padding: 25px;
+            }
+
+            .floating-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .floating-card .big-number {
+                font-size: 2rem;
+            }
+            
+            .model-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .model-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .calculation-step {
+                font-size: 1rem;
+            }
+
+            .calculation-step.result {
+                font-size: 1.1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .stat-card {
+                padding: 20px 15px;
+            }
+
+            .stat-icon {
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .stat-label {
+                font-size: 0.9rem;
+            }
+            
+            .potential-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .potential-card {
+                padding: 25px;
+            }
+
+            .potential-card h3 {
+                font-size: 1.2rem;
+            }
+            
+            .form-container {
+                padding: 30px 20px;
+                margin: 0 20px;
+            }
+
+            .form-group {
+                margin-bottom: 18px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 10px;
+            }
+            
+            .footer-stats {
+                gap: 20px;
+            }
+
+            .footer-stat-number {
+                font-size: 1.3rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+
+            .contact-item {
+                font-size: 0.95rem;
+                padding: 12px;
+            }
+
+            .founder-card {
+                padding: 25px;
+            }
+
+            .founder-avatar {
+                width: 80px;
+                height: 80px;
+                font-size: 2rem;
+            }
+
+            .founder-name {
+                font-size: 1.3rem;
+            }
+
+            .scroll-top {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.8rem;
+                line-height: 1.2;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .hero-benefit {
+                padding: 12px;
+            }
+
+            .benefit-icon {
+                font-size: 1.3rem;
+                margin-right: 8px;
+            }
+
+            .benefit-text {
+                font-size: 0.75rem;
+            }
+
+            .benefit-text strong {
+                font-size: 0.8rem;
+            }
+
+            .floating-card {
+                padding: 20px;
+            }
+
+            .floating-card h3 {
+                font-size: 1rem;
+            }
+
+            .floating-card .big-number {
+                font-size: 1.8rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .stat-card {
+                padding: 18px 12px;
+            }
+
+            .stat-icon {
+                font-size: 1.8rem;
+            }
+
+            .stat-number {
+                font-size: 1.8rem;
+            }
+
+            .stat-label {
+                font-size: 0.85rem;
+            }
+
+            .model-content h2 {
+                font-size: 1.6rem;
+            }
+
+            .model-features li {
+                font-size: 0.9rem;
+                padding: 10px 0;
+                padding-left: 30px;
+            }
+
+            .calculation-step {
+                font-size: 0.9rem;
+                margin: 12px 0;
+            }
+
+            .calculation-step.result {
+                font-size: 1rem;
+            }
+
+            .potential-card {
+                padding: 20px;
+            }
+
+            .potential-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .form-container {
+                margin: 0 15px;
+                padding: 25px 15px;
+            }
+
+            .contact-info {
+                padding: 25px;
+            }
+
+            .contact-item {
+                margin: 15px 0;
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+
+            .contact-icon {
+                font-size: 1.3rem;
+                margin-right: 12px;
+                width: 35px;
+            }
+
+            .founder-card {
+                padding: 20px;
+            }
+
+            .founder-avatar {
+                width: 70px;
+                height: 70px;
+                font-size: 1.8rem;
+                margin-bottom: 12px;
+            }
+
+            .founder-name {
+                font-size: 1.2rem;
+            }
+
+            .founder-title {
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.95rem;
+            }
+
+            .modal-content {
+                padding: 25px;
+                margin: 20% auto;
+            }
+
+            .modal h2 {
+                font-size: 1.5rem;
+            }
+
+            .modal p {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Прелоадер */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: opacity 0.5s ease;
+        }
+
+        .preloader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(251, 191, 36, 0.3);
+            border-radius: 50%;
+            border-top-color: #FBBF24;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loader-text {
+            position: absolute;
+            bottom: 40%;
+            color: #FBBF24;
+            font-size: 1.1rem;
+            font-weight: 600;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @media (max-width: 480px) {
+            .loader {
+                width: 50px;
+                height: 50px;
+            }
+
+            .loader-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Прелоадер -->
+    <div class="preloader" id="preloader">
+        <div>
+            <div class="loader"></div>
+            <div class="loader-text">Easy Skill</div>
+        </div>
+    </div>
+
+    <!-- Навигация -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">Easy Skill</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Главная</a></li>
+                <li><a href="#stats">Статистика</a></li>
+                <li><a href="#model">Модель</a></li>
+                <li><a href="#potential">Потенциал</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a href="#invest" class="cta-button">Инвестировать</a>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#hero">Главная</a>
+            <a href="#stats">Статистика</a>
+            <a href="#model">Модель</a>
+            <a href="#potential">Потенциал</a>
+            <a href="#contact">Контакты</a>
+            <a href="#invest">Инвестировать</a>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section id="hero" class="hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>
+                    <span class="hero-highlight">₽2.7М в месяц</span>
+                    при 2 продажах в день
+                </h1>
+                <p>Easy Skill доказал: эмоциональная терапия через музыку - это прибыльный бизнес с невероятной экономикой</p>
+                
+                <div class="hero-benefits">
+                    <div class="hero-benefit">
+                        <div class="benefit-icon">💎</div>
+                        <div class="benefit-text">
+                            <strong>Доказанная модель</strong>
+                            8 месяцев успешной работы
+                        </div>
+                    </div>
+                    <div class="hero-benefit">
+                        <div class="benefit-icon">🎯</div>
+                        <div class="benefit-text">
+                            <strong>Уникальная ниша</strong>
+                            Единственные в России
+                        </div>
+                    </div>
+                    <div class="hero-benefit">
+                        <div class="benefit-icon">🚀</div>
+                        <div class="benefit-text">
+                            <strong>Готово к росту</strong>
+                            3 направления ждут запуска
+                        </div>
+                    </div>
+                    <div class="hero-benefit">
+                        <div class="benefit-icon">💰</div>
+                        <div class="benefit-text">
+                            <strong>Высокая прибыль</strong>
+                            75% маржинальность
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#invest" class="cta-button" style="display: inline-block; margin-top: 20px;">
+                    Узнать подробности проекта
+                </a>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <h3>💎 Уникальная ниша</h3>
+                    <p>"Вокал как SPA для души"</p>
+                    <span class="big-number">₽10.8М</span>
+                    <p>потенциал при масштабировании</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Статистика -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Доказанная экономика проекта</h2>
+            <p class="section-subtitle fade-in">Каждая цифра подтверждена реальными продажами и финансовой отчетностью</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card fade-in">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-number" data-target="2700000">0</div>
+                    <div class="stat-label">₽ месячной выручки с вокала</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-number" data-target="45000">0</div>
+                    <div class="stat-label">₽ средний чек за пакет</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon">💎</div>
+                    <div class="stat-number" data-target="75">0</div>
+                    <div class="stat-label">% чистой маржинальности</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-number" data-target="0">0</div>
+                    <div class="stat-label">% оттока клиентов</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number" data-target="85">0</div>
+                    <div class="stat-label">довольных клиентов</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon">🚀</div>
+                    <div class="stat-number" data-target="4">0</div>
+                    <div class="stat-label">направления готовы</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Бизнес-модель -->
+    <section id="model" class="business-model">
+        <div class="container">
+            <div class="model-grid">
+                <div class="model-content slide-in-left">
+                    <h2>Простая математика успеха</h2>
+                    <ul class="model-features">
+                        <li>Помогаем IT-специалистам справляться со стрессом</li>
+                        <li>Предоставляем врачам способ эмоциональной разгрузки</li>
+                        <li>Единственная в России концепция "Вокал как SPA для души"</li>
+                        <li>Целевая аудитория: 27-45 лет, доход ₽200K+</li>
+                        <li>Клиенты готовы платить за эмоциональный результат</li>
+                    </ul>
+                </div>
+                
+                <div class="calculation-box slide-in-right">
+                    <h3 style="color: #FBBF24; margin-bottom: 25px; font-size: 1.3rem;">Расчет прибыли:</h3>
+                    <div class="calculation-step">
+                        <span>1 продажа:</span>
+                        <span>₽45,000</span>
+                    </div>
+                    <div class="calculation-step">
+                        <span>2 продажи в день:</span>
+                        <span>₽90,000</span>
+                    </div>
+                    <div class="calculation-step">
+                        <span>30 дней в месяц:</span>
+                        <span>₽2,700,000</span>
+                    </div>
+                    <div class="calculation-step">
+                        <span>Себестоимость 25%:</span>
+                        <span>-₽675,000</span>
+                    </div>
+                    <div class="calculation-step result">
+                        <span>Чистая прибыль:</span>
+                        <span>₽2,025,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Потенциал масштабирования -->
+    <section id="potential" class="potential-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Потенциал масштабирования</h2>
+            <p class="section-subtitle fade-in">3 направления готовы к запуску с аналогичной экономикой</p>
+            
+            <div class="potential-grid">
+                <div class="potential-card fade-in" data-delay="0.1">
+                    <div class="potential-status status-active">Работает</div>
+                    <h3>🎤 Вокал</h3>
+                    <div class="stat-number" style="color: #10B981;">₽2.7М</div>
+                    <p>в месяц • Доказанная модель • 85 клиентов</p>
+                </div>
+                <div class="potential-card fade-in" data-delay="0.2">
+                    <div class="potential-status status-ready">Готов к запуску</div>
+                    <h3>🥁 Барабаны</h3>
+                    <div class="stat-number" style="color: #FBBF24;">₽2.7М</div>
+                    <p>потенциал • Методика готова • Требует инвестиций</p>
+                </div>
+                <div class="potential-card fade-in" data-delay="0.3">
+                    <div class="potential-status status-ready">Готов к запуску</div>
+                    <h3>🎸 Гитара</h3>
+                    <div class="stat-number" style="color: #FBBF24;">₽2.7М</div>
+                    <p>потенциал • Методика готова • Требует инвестиций</p>
+                </div>
+                <div class="potential-card fade-in" data-delay="0.4">
+                    <div class="potential-status status-ready">Готов к запуску</div>
+                    <h3>🎵 Студия звукозаписи</h3>
+                    <div class="stat-number" style="color: #FBBF24;">₽2.7М</div>
+                    <p>потенциал • Методика готова • Требует инвестиций</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;" class="fade-in">
+                <h3 style="font-size: 1.8rem; color: #1F2937; margin-bottom: 15px;">
+                    Итого: <span style="color: #10B981;">₽10.8М в месяц</span> потенциальной выручки
+                </h3>
+                <p style="font-size: 1.1rem; color: #6B7280;">
+                    Требуется: <strong>₽2-10М инвестиций</strong> для запуска всех направлений
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма инвестора -->
+    <section id="invest" class="investor-form">
+        <div class="container">
+            <h2 class="section-title fade-in" style="color: #fff;">Стать соинвестором</h2>
+            <p class="section-subtitle fade-in" style="color: #E2E8F0;">Получите подробный бизнес-план и финансовую модель проекта</p>
+            
+            <div class="form-container fade-in">
+                <form id="investorForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя *</label>
+                        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="example@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Телефон *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 123-45-67">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="investment">Планируемая сумма инвестиций</label>
+                        <select id="investment" name="investment">
+                            <option value="">Выберите диапазон</option>
+                            <option value="2-5">₽2-5 млн</option>
+                            <option value="5-10">₽5-10 млн</option>
+                            <option value="10+">₽10+ млн</option>
+                            <option value="other">Другая сумма</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="experience">Опыт инвестиций</label>
+                        <select id="experience" name="experience">
+                            <option value="">Выберите вариант</option>
+                            <option value="first">Первые инвестиции</option>
+                            <option value="some">Несколько проектов</option>
+                            <option value="experienced">Опытный инвестор</option>
+                            <option value="professional">Профессиональный инвестор</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Вопросы или комментарии</label>
+                        <textarea id="message" name="message" placeholder="Что вас больше всего интересует в проекте?"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="form-submit">
+                        Получить бизнес-план
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Свяжитесь с нами</h2>
+            <p class="section-subtitle fade-in">Готовы ответить на любые вопросы об инвестировании в Easy Skill</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info slide-in-left">
+                    <h3 style="color: #1F2937; margin-bottom: 25px; font-size: 1.5rem;">Контактная информация</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>Телефон:</strong><br>
+                            <a href="tel:+79500082854" style="color: #3182CE; text-decoration: none;">+7 950 008 2854</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:invest@easyskill.ru" style="color: #3182CE; text-decoration: none;">invest@easyskill.ru</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Адрес:</strong><br>
+                            СПб, ул. Пролетарская 36
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <strong>Режим работы:</strong><br>
+                            Пн-Пт: 10:00-19:00<br>
+                            Сб-Вс: по договоренности
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="founder-card slide-in-right">
+                    <div class="founder-avatar">👩‍💼</div>
+                    <h3 class="founder-name">Анастасия Павлова</h3>
+                    <p class="founder-title">Основатель Easy Skill</p>
+                    <p style="margin-bottom: 15px; position: relative; z-index: 2; font-size: 0.95rem;">
+                        "8 месяцев назад я запустила Easy Skill как эксперимент. 
+                        Сегодня это проект с доказанной экономикой ₽2.7М в месяц. 
+                        Готова поделиться этой формулой с инвестором."
+                    </p>
+                    <a href="tel:+79500082854" class="cta-button" style="display: inline-block;">
+                        Связаться напрямую
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Easy Skill</div>
+            <p class="footer-text">
+                Уникальная концепция "Вокал как SPA для души" с доказанной экономикой ₽2.7М в месяц
+            </p>
+            
+            <div class="footer-stats">
+                <div class="footer-stat">
+                    <span class="footer-stat-number">₽2.7М</span>
+                    <span class="footer-stat-label">месячная выручка</span>
+                </div>
+                <div class="footer-stat">
+                    <span class="footer-stat-number">75%</span>
+                    <span class="footer-stat-label">маржинальность</span>
+                </div>
+                <div class="footer-stat">
+                    <span class="footer-stat-number">0%</span>
+                    <span class="footer-stat-label">отток клиентов</span>
+                </div>
+                <div class="footer-stat">
+                    <span class="footer-stat-number">₽10.8М</span>
+                    <span class="footer-stat-label">потенциал роста</span>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Easy Skill. Инвестиционное предложение для квалифицированных инвесторов.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <h2>🎉 Заявка отправлена!</h2>
+            <p>Спасибо за интерес к проекту Easy Skill! Мы свяжемся с вами в течение 24 часов и предоставим подробный бизнес-план.</p>
+            <p style="margin-top: 20px;"><strong>Анастасия Павлова</strong><br>+7 950 008 2854</p>
+        </div>
+    </div>
+
+    <!-- Кнопка наверх -->
+    <div class="scroll-top" id="scrollTop">↑</div>
+
+    <script>
+        // Прелоадер
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('preloader').classList.add('hidden');
+            }, 1000);
+        });
+
+        // Мобильное меню
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Закрытие мобильного меню при клике на ссылку
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Навигация с изменением стиля при скролле
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Анимация счетчиков
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                
+                if (target >= 1000000) {
+                    element.textContent = (current / 1000000).toFixed(1) + 'М';
+                } else if (target >= 1000) {
+                    element.textContent = (current / 1000).toFixed(0) + 'К';
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+
+        // Intersection Observer для анимаций
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Запуск анимации счетчиков
+                    const counters = entry.target.querySelectorAll('[data-target]');
+                    counters.forEach(counter => {
+                        if (!counter.animated) {
+                            counter.animated = true;
+                            setTimeout(() => animateCounter(counter), 500);
+                        }
+                    });
+                    
+                    // Анимация карточек потенциала с задержкой
+                    if (entry.target.hasAttribute('data-delay')) {
+                        const delay = parseFloat(entry.target.getAttribute('data-delay')) * 1000;
+                        setTimeout(() => {
+                            entry.target.style.transitionDelay = '0s';
+                        }, delay);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Наблюдение за элементами
+        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Создание частиц в героической секции
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = window.innerWidth < 768 ? 30 : 50; // Меньше частиц на мобильных
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Случайные размеры и позиции
+                const size = Math.random() * 4 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Форма инвестора
+        const investorForm = document.getElementById('investorForm');
+        const successModal = document.getElementById('successModal');
+        const closeModal = document.getElementById('closeModal');
+
+        investorForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Симуляция отправки формы
+            const submitBtn = investorForm.querySelector('.form-submit');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Отправляем...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                successModal.style.display = 'block';
+                
+                // Очистка формы
+                investorForm.reset();
+            }, 2000);
+        });
+
+        // Закрытие модального окна
+        closeModal.addEventListener('click', () => {
+            successModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.style.display = 'none';
+            }
+        });
+
+        // Кнопка "наверх"
+        const scrollTopBtn = document.getElementById('scrollTop');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Плавная прокрутка для навигационных ссылок
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Маска для телефона
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            let formattedValue = '';
+            
+            if (value.length > 0) {
+                formattedValue = '+7 ';
+                if (value.length > 1) {
+                    formattedValue += '(' + value.substring(1, 4);
+                    if (value.length > 4) {
+                        formattedValue += ') ' + value.substring(4, 7);
+                        if (value.length > 7) {
+                            formattedValue += '-' + value.substring(7, 9);
+                            if (value.length > 9) {
+                                formattedValue += '-' + value.substring(9, 11);
+                            }
+                        }
+                    }
+                }
+            }
+            
+            e.target.value = formattedValue;
+        });
+
+        // Валидация email
+        const emailInput = document.getElementById('email');
+        emailInput.addEventListener('blur', function() {
+            const email = this.value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (email && !emailRegex.test(email)) {
+                this.style.borderColor = '#EF4444';
+                if (!this.nextElementSibling || !this.nextElementSibling.classList.contains('error-message')) {
+                    const errorMsg = document.createElement('div');
+                    errorMsg.className = 'error-message';
+                    errorMsg.style.color = '#EF4444';
+                    errorMsg.style.fontSize = '0.9rem';
+                    errorMsg.style.marginTop = '5px';
+                    errorMsg.textContent = 'Пожалуйста, введите корректный email';
+                    this.parentNode.appendChild(errorMsg);
+                }
+            } else {
+                this.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                const errorMsg = this.parentNode.querySelector('.error-message');
+                if (errorMsg) {
+                    errorMsg.remove();
+                }
+            }
+        });
+
+        // Интерактивные карточки статистики
+        document.querySelectorAll('.stat-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                const icon = this.querySelector('.stat-icon');
+                if (icon) {
+                    icon.style.transform = 'scale(1.2) rotate(360deg)';
+                    icon.style.transition = 'transform 0.5s ease';
+                }
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                const icon = this.querySelector('.stat-icon');
+                if (icon) {
+                    icon.style.transform = 'scale(1) rotate(0deg)';
+                }
+            });
+        });
+
+        // Эффект параллакса для героической секции (только на десктопе)
+        if (window.innerWidth > 768) {
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('.hero::before');
+                const speed = scrolled * 0.5;
+                
+                parallaxElements.forEach(element => {
+                    element.style.transform = `translateY(${speed}px)`;
+                });
+            });
+        }
+
+        // Инициализация всех функций при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            
+            // Добавление эффекта печатания для заголовка (только на десктопе)
+            if (window.innerWidth > 768) {
+                const heroTitle = document.querySelector('.hero-highlight');
+                if (heroTitle) {
+                    const text = heroTitle.textContent;
+                    heroTitle.textContent = '';
+                    heroTitle.style.borderRight = '2px solid #FBBF24';
+                    
+                    let i = 0;
+                    const typeWriter = () => {
+                        if (i < text.length) {
+                            heroTitle.textContent += text.charAt(i);
+                            i++;
+                            setTimeout(typeWriter, 100);
+                        } else {
+                            setTimeout(() => {
+                                heroTitle.style.borderRight = 'none';
+                            }, 500);
+                        }
+                    };
+                    
+                    setTimeout(typeWriter, 1500);
+                }
+            }
+        });
+
+        // Отслеживание кликов по CTA кнопкам для аналитики
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function() {
+                console.log('CTA clicked:', this.textContent.trim());
+            });
+        });
+
+        // Добавление эффекта ripple для кнопок
+        document.querySelectorAll('.cta-button, .form-submit').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255, 255, 255, 0.3)';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.pointerEvents = 'none';
+                
+                this.style.position = 'relative';
+                this.style.overflow = 'hidden';
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // CSS для анимации ripple
+        const rippleCSS = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        
+        const style = document.createElement('style');
+        style.textContent = rippleCSS;
+        document.head.appendChild(style);
+
+        // Уведомления об активности на сайте (только на десктопе)
+        if (window.innerWidth > 768) {
+            function showActivityNotification() {
+                const notifications = [
+                    "🔥 Иван П. только что запросил бизнес-план",
+                    "💰 Новый инвестор изучает проект",
+                    "📊 Михаил Д. скачал финансовую модель",
+                    "🎯 Елена К. назначила встречу с основателем"
+                ];
+                
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 100px;
+                    right: 20px;
+                    background: linear-gradient(45deg, #10B981, #059669);
+                    color: white;
+                    padding: 15px 20px;
+                    border-radius: 10px;
+                    font-size: 0.9rem;
+                    z-index: 9999;
+                    transform: translateX(400px);
+                    transition: transform 0.3s ease;
+                    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                    max-width: 300px;
+                `;
+                
+                notification.textContent = notifications[Math.floor(Math.random() * notifications.length)];
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.style.transform = 'translateX(0)';
+                }, 100);
+                
+                setTimeout(() => {
+                    notification.style.transform = 'translateX(400px)';
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 300);
+                }, 4000);
+            }
+
+            // Показ уведомлений каждые 15-30 секунд
+            setInterval(showActivityNotification, Math.random() * 15000 + 15000);
+        }
+
+        // Счетчик времени на странице (для аналитики)
+        let timeOnPage = 0;
+        setInterval(() => {
+            timeOnPage++;
+            if (timeOnPage % 30 === 0) { // каждые 30 секунд
+                console.log(`Время на странице: ${timeOnPage} секунд`);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
